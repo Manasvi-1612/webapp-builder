@@ -1,28 +1,39 @@
+"use client"
+
 import Card from "@/components/shared/Card";
 import Label from "@/components/shared/Label";
+import Main from "@/components/shared/Main";
 import SmallCard from "@/components/shared/SmallCard";
-import { Input } from "@/components/ui/input";
-import Image from "next/image";
+import { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    })
+  }, [])
+
   return (
-    <section className="xl:pl-72 xl:pr-60  pl-10 pr-10">
+    <section className="xl:ml-[280px] xl:mr-52  pl-10 pr-10">
+      <Main />
       <Card />
       <SmallCard />
 
-      <section className="grid grid-cols-2">
+      <section className="grid grid-cols-1 md:grid-cols-2 md:place-items-end pb-8">
         <div className="p-normal-32 text-gray-basic">Sign up and get exclusive special deals</div>
 
         <form action="#">
-          <div className="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
-            <div className="relative">
-              <input className="block p-3 pl-10 w-full text-sm rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg " placeholder="Enter your email" type="email" id="email" required/>
-            </div>
-            <div>
-              <button type="submit" className="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-primary sm:rounded-none sm:rounded-r-lg focus:ring-4 focus:ring-primary-3000">Sign up</button>
-            </div>
+          <div className="mb-3 flex ">
+            <input className=" p-4 pl-10 max-w-[348px] 2xl:w-[348px] text-sm rounded-lg focus:outline-gray-light sm:rounded-none sm:rounded-l-xl bg-white shadow-sm " type="email" id="email" required />
+
+            <button type="submit" className="py-4 px-5 text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-primary sm:rounded-none sm:rounded-r-xl focus:ring-4 focus:ring-primary-3000 p-normal-14 tracking-normal">Sign Up</button>
+
           </div>
-          
+
         </form>
       </section>
     </section>

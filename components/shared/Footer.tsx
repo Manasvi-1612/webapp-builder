@@ -8,7 +8,7 @@ import { Separator } from '@radix-ui/react-dropdown-menu'
 
 const Footer = () => {
     return (
-        <section className='bg-custom  m-3'>
+        <section className='bg-custom m-3'>
             <section className='flex flex-col-reverse lg:flex-row lg:items-center lg:justify-center xl:gap-56 gap-8 lg:gap-20 pt-[50px] lg:pb-44 xl:pr-44 px-3 lg:px-0 pb-10'>
                 <div className='flex flex-col lg:flex-row justify-start xl:gap-52 lg:gap-20 gap-6'>
                     <div>

@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <section className='bg-custom flex-end md:flex-center h-16'>
             <MobileNav />
-            <div className='hidden md:flex gap-10'>
+            <div className='hidden md:flex gap-[78px]'>
                 <NavItems />
             </div>
         </section>
